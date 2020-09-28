@@ -10,7 +10,7 @@ It is platform where you can create your link. Share this link with your social 
 [x] Django
 [x] Postgresql
 
-## Devloper
+## Developer
 Made with ❤️️ by Sandip Sadhukhan.
 
 <b> Contact </b>
