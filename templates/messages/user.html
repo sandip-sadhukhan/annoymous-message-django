@@ -1,0 +1,36 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container py-3">
+	<div class="row">
+		<div class="col-sm-10 m-auto">
+			<div class="card bg-primary text-light">
+				<div class="card-header">
+					<div class="lead text-center">
+						Welcome, {{user.name}}
+					</div>
+				</div>
+				<div class="card-body bg-light text-dark">
+						<div class="copytext alert alert-info text-center" role="alert">
+							Share this Link to your friends - 
+							<span id="link">https://annoymous-message.herokuapp.com/user/{{user.id}}/share/</span>
+						</div>
+						<!-- <i class="fa fa-clipboard"></i> (Click to Copy) -->
+					<h3 class="text-center my-3">
+						Messages ({{user.answers.count }})
+					</h3>
+					{% if user.answers.count == 0 %}
+						<div class="alert alert-danger text-center">Inbox is Empty!</div>
+					{% else %}
+						<ul class="list-group list-group-flush">
+							{% for answer in user.answers.all %}
+							<li class="list-group-item"><i class="fa fa-arrow-circle-right"></i> {{answer.content}}</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
