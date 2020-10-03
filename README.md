@@ -6,7 +6,7 @@ It is a platform where you can create your link. Share this link with your socia
 ## Technology Used
 1. Html
 2. Css
-3.Bootstrap
+3. Bootstrap
 4. Django
 5. Postgresql
 
